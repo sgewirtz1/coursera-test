@@ -71,7 +71,7 @@ p {
 }
 
 .row .section:hover {
-	overflow: auto;
+	overflow-y: scroll;
 }
 
 /* desktop */
