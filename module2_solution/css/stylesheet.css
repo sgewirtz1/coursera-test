@@ -26,23 +26,27 @@ h1.med-lg-hide, h1.med-md-hide {
 	background-color: #A52A2A;
 }
 
-p {	
+.content {	
 	padding: 10px;
-	padding-top: 20px;
+	padding-top: 30px;
 }
 
 .section-header.med-sm-hide {
 	font-size: 125%;
 	border-left: 1px solid black;
 	border-bottom: 1px solid black;
-	padding: 2px 10px;
+	padding: 1px 10px;
 	float: right;
 	position: relative;
+	top: 27px;
+	right: 1px;
 }
 
 .section-header.med-lg-hide, .section-header.med-md-hide {
 	font-size: 125%;
-	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
 	padding: 2px 10px;
 	float: right;
 	text-align: center;
@@ -66,11 +70,11 @@ p {
 	position: relative;
 	width: 100%;
 }
-.row .section {
+.section {
 	overflow: hidden;
 }
 
-.row .section:hover {
+.section:hover {
 	overflow-y: scroll;
 }
 
