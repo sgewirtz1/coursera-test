@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+
+#main-content section {
+	min-height: 1000px;
+	background-color: #cccccc;
+	padding: 2px 5px;
+	margin: 15px 0px;
+}
+
+.navbar {
+	background-color: #eeeeee;
+}
