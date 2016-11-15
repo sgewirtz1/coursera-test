@@ -1,8 +1,9 @@
-<div>
+<div class="snip">
+  <span ng-if="menuDir.foundItems.length==0">Nothing found</span>
   <ol>
-    <li ng-repeat="item in menuDir.foundItems">
+    <ul ng-repeat="item in menuDir.foundItems">
       {{ item.name }}
       <button ng-click="menuDir.onRemove({index: $index});">Don't want this one!</button>
-    </li>
+    </ul>
   </ol>
 </div>

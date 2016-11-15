@@ -41,7 +41,8 @@
 			var data = promise.then(function success(a) {
 				var fil = [];
 				for (var i = 0; i < a.data.menu_items.length; i++) {
-					if(a.data.menu_items[i].name.toLowerCase().indexOf(menu.searchTerm) !== -1)
+					if(a.data.menu_items[i].name.toLowerCase().indexOf(menu.searchTerm) !== -1
+							&& menu.searchTerm != false)
 					{
 						fil.push(a.data.menu_items[i]);
 					}
