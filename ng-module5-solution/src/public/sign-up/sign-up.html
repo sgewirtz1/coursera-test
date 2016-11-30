@@ -1,0 +1,41 @@
+<div class="container" ng-controller="SignUpController as signUpCtrl">
+  <form name="signUpForm" class="form-signin" novalidate>
+    <h2 class="form-signin-heading">Please sign up for our newsletter below</h2>
+    <label for="firstName" class="sr-only">First Name</label>
+    <input type="text" id="firstName" name="firstName" class="form-control"
+    ng-model="signUpCtrl.firstName" placeholder="First Name" required autofocus="">
+    <span ng-if="signUpForm.firstName.$error.required
+    && signUpForm.firstName.$touched">First name is required</span>
+
+    <label for="lastName" class="sr-only">Last Name</label>
+    <input type="text" id="lastName" name="lastName" class="form-control"
+    ng-model="signUpCtrl.lastName" placeholder="Last Name" required>
+    <span ng-if="signUpForm.lastName.$error.required
+    && signUpForm.lastName.$touched">Last name is required</span>
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" name="inputEmail" class="form-control"
+    ng-model="signUpCtrl.inputEmail" placeholder="Email address" required>
+    <span ng-if="signUpForm.inputEmail.$invalid
+    && signUpForm.inputEmail.$touched">Email address is required</span>
+
+    <label for="phoneNumber" class="sr-only">Phone Number</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" class="form-control"
+    ng-model="signUpCtrl.phoneNumber" placeholder="Phone Number (###-###-####)"
+    pattern="(\d{3})-(\d{3})-(\d{4})">
+    <span ng-if="signUpForm.phoneNumber.$invalid
+    && signUpForm.phoneNumber.$touched">Phone number is required</span>
+
+    <label for="favorite" class="sr-only">Favorite Menu Item</label>
+    <input type="text" id="favorite" name="favorite" class="form-control"
+    ng-model="signUpCtrl.favorite" placeholder="Favorite Menu Item Number" required>
+    <span ng-if="signUpForm.favorite.$invalid
+    && signUpForm.favorite.$touched">Favorite menu item selection is required</span>
+
+    <button class="btn btn-lg btn-primary btn-block"
+    ng-disabled="signUpForm.$invalid"
+    ng-click="signUpCtrl.signUp()" >Sign in</button>
+  </form>
+  <div ng-if="signUpCtrl.getUser()!=undefined">Your information has been saved.</div>
+</div>
+<!-- copied starting point from http://getbootstrap.com/examples/signin/ -->

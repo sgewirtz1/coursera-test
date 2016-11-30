@@ -1,0 +1,32 @@
+<div class="container">
+  <span ng-if="myInfoCtrl.userInfo==undefined">Not Signed Up Yet. <a ui-sref="public.signUp">Sign up Now!</a></span>
+  <div ng-if="myInfoCtrl.userInfo!=undefined">
+    <div>
+      First Name: {{myInfoCtrl.userInfo.firstName}}
+    </div>
+
+    <div>
+      Last Name: {{myInfoCtrl.userInfo.lastName}}
+    </div>
+
+    <div>
+      Email Address: {{myInfoCtrl.userInfo.emailAddress}}
+    </div>
+
+    <div>
+      Phone Number: {{myInfoCtrl.userInfo.phoneNumber}}
+    </div>
+    <div ng-if="myInfoCtrl.fave==undefined">
+      No such menu number exists.
+    </div>
+    <div ng-if="myInfoCtrl.fave!=undefined">
+      <div>
+        Favorite Item: {{myInfoCtrl.userInfo.favoriteMenuItem}} - {{myInfoCtrl.fave.name}}
+        <br>
+        <img ng-src="{{myInfoCtrl.src}}" alt="{{myInfoCtrl.name}}" />
+        <br>
+        Description: {{myInfoCtrl.fave.description}}
+      </div>
+  </div>
+  </div>
+</div>
